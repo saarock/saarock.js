@@ -10,56 +10,64 @@ Using `async/await` can significantly improve performance by allowing for non-bl
 
 ## Table of Contents
 
-1. [How To Use Libary](#how-to-use-libary)
-2. [License](#license)
+1. [How To Use Libary for toast](#how-to-use-libary-for-toast)
+2. [How To Use Libary for backToTop](#how-to-use-libary-for-backToTopButton)
+3. [License](#license)
 
 
-## How To Use Libary 
+## How To Use Libary For Toast
 ```html
 <script type="module">
   import { notty } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
 
 // For toast 
+/**
+ * @note: first option is default [ AND THE RECOMMENDATION IS USE ONLY ONE position for better experience on small devices ]
+ */
       notty.success({
-        position: "right", // optional
+        position: "right" || "left" || "middle",  // optional
         message: "success message",  // optional but better when manually added
-        comeFrom: "BOTTOM", // optional
+        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
-        leaveFrom: "LEFT", // optional
-        comeFrom: "RIGHT" // optional
+        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
       });
 
 
       notty.warning({
-        position: "right", // optional
+        position: "right" || "left" || "middle", // optional
         message: "warning message",  // optional but better when manually added
-        comeFrom: "BOTTOM", // optional
+        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
-        leaveFrom: "LEFT", // optional
-        comeFrom: "RIGHT" // optional
+        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
       });
 
       notty.error({
-        position: "right", // optional
+        position: "right" || "left" || "middle", // optional
         message: "error message",  // optional but better when manually added
-        comeFrom: "BOTTOM", // optional
+        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
-        leaveFrom: "LEFT", // optional
-        comeFrom: "RIGHT" // optional
+        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
       });
 
       notty.loading({
-        position: "right", // optional
+        position:"right" || "left" || "middle", // optional
         message: "loading message", // optional but better when manually added
-        comeFrom: "BOTTOM", // optional
+        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
-        leaveFrom: "LEFT", // optional
-        comeFrom: "RIGHT" // optional
+        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
       });
 
-// for backToTop button
+</script>
+```
 
-saarock.backToTop(
+## How to Use Libary For BackToTopButton
+```html 
+<script type="module">
+  import { notty } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
+
+   // for backToTop button
+
+   saarock.backToTop(
     {
       backColor: "green" // required [Any color based on your web style]
     }
@@ -67,7 +75,6 @@ saarock.backToTop(
 
 </script>
 ```
-
 ## License
 
 This library is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.

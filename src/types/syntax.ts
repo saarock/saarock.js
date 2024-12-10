@@ -14,3 +14,10 @@ export interface Toast {
   leaveFrom?: ANIMATION_TYPE;
   RemoveIconClassName?: string;
 }
+
+/**
+ * Back to top options required
+ */
+export interface BackToTop {
+  backColor: string
+}

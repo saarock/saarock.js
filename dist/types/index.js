@@ -1,5 +1,5 @@
 export * from "./syntax.js";
 export * from "./timer.js";
 export * from "./types.js";
-export * from "./toast_related_interface.js";
+export * from "./toastRelatedInterface.js";
 //# sourceMappingURL=index.js.map

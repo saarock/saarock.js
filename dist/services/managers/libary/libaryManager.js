@@ -38,4 +38,4 @@ class ToastsManager extends BackToTopManager {
 }
 const notty = new ToastsManager();
 export { notty };
-//# sourceMappingURL=toastsManager.js.map
+//# sourceMappingURL=libaryManager.js.map

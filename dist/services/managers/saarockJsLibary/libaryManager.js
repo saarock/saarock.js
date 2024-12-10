@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { toastsDeveloper } from "../../developers/toasts/toastsDeveloper.js";
-import { backToTopDeveloper } from "../../developers/toasts/backToTopDeveloper.js";
+import { toastsDeveloper } from "../../developers/saarockJsLibary/toastsDeveloper.js";
+import { backToTopDeveloper } from "../../developers/saarockJsLibary/backToTopDeveloper.js";
 class BackToTopManager {
     backToTop(backToTopOption) {
         backToTopDeveloper.backToTop(backToTopOption);
@@ -36,6 +36,8 @@ class ToastsManager extends BackToTopManager {
         });
     }
 }
-const notty = new ToastsManager();
-export { notty };
-//# sourceMappingURL=toastsManager.js.map
+class Saarock extends ToastsManager {
+}
+const saarock = new Saarock();
+export { saarock };
+//# sourceMappingURL=libaryManager.js.map

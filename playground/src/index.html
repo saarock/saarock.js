@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notty Toast Library Demo</title>
+  <title>Saarock js</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../src/styles/notty.css" />
+  <!-- <link rel="stylesheet" href="../../src/styles/notty.css" /> -->
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="../../public/images/logo.png" type="image/x-icon">
 </head>
@@ -15,7 +15,7 @@
       <!-- Logo Section -->
       <div class="flex items-center">
         <img src="../../public/images/logo.png" alt="Logo" class="h-10 w-10 mr-3">
-        <span class="text-2xl font-bold">Notty.js</span>
+        <span class="text-2xl font-bold">Saarock.Js</span>
       </div>
   
       <!-- Navigation/CTA Section -->
@@ -29,7 +29,7 @@
 
   <main class="flex items-center justify-center min-h-screen px-4 text-white pt-16 md:pt-20">
     <div class="form-container max-w-lg w-full p-6 md:p-8 rounded-lg shadow-lg bg-gray-800">
-      <h1 class="text-4xl font-extrabold text-center mb-6">Notty Toast Library</h1>
+      <h1 class="text-4xl font-extrabold text-center mb-6">Saarock Library</h1>
       <form id="toastForm" class="space-y-6">
         <div>
           <label for="message" class="block text-sm font-medium">Message</label>
@@ -37,7 +37,7 @@
         </div>
         <div>
           <label for="goTo" class="block text-sm font-medium">goTo</label>
-          <input type="text" id="goTo" class="mt-1 block w-full bg-transparent border border-gray-300 text-white py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter toast message">
+          <input type="text" id="goTo" class="mt-1 block w-full bg-transparent border border-gray-300 text-white py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter the link where you want to redirect after click the toast">
         </div>
         <div>
           <label for="timeOut" class="block text-sm font-medium">Timeout (ms)</label>
@@ -83,7 +83,11 @@
   </main>
 
 <script type="module" >
-  import { notty } from "../../dist/index.js";
+  import { saarock } from "../../dist/index.js";
+
+  saarock.backToTop(
+    {backColor: "green"}
+  );
 
 const btnSuccess = document.querySelector('#successBtn');
 const btnLoading = document.querySelector('#loadingBtn');
@@ -97,51 +101,51 @@ const leaveFromSelect = document.querySelector('#leaveFrom');
 const warningBtn = document.querySelector('#warningBtn');
 
 btnSuccess.addEventListener("click", () => {
-  notty.success({
+  saarock.success({
     message: messageInput.value || "Success Message",
     comeFrom: comeFromSelect.value,
     position: positionSelect.value,
     toatsClassName: "bg-gray-900",
     timeOut: parseInt(timeOutInput.value) || 5000,
     leaveFrom: leaveFromSelect.value,
-    goTo:goToInput.value || "/hello"
+    goTo:goToInput.value
 
   });
 });
 
 btnLoading.addEventListener("click", () => {
-  notty.loading({
+  saarock.loading({
     message: messageInput.value || "Loading Message",
     comeFrom: comeFromSelect.value,
     position: positionSelect.value,
     timeOut: parseInt(timeOutInput.value) || 5000,
     leaveFrom: leaveFromSelect.value,
-    goTo:goToInput.value || "/hello"
+    goTo:goToInput.value
 
 
   });
 });
 
 btnError.addEventListener("click", () => {
-  notty.error({
+  saarock.error({
     message: messageInput.value || "Error Message",
     position: positionSelect.value,
     comeFrom: comeFromSelect.value,
     leaveFrom: leaveFromSelect.value,
     timeOut: parseInt(timeOutInput.value) || 5000,
-    goTo:goToInput.value || "/hello"
+    goTo:goToInput.value
 
   });
 });
 
 warningBtn.addEventListener("click", () => {
-  notty.warning({
+  saarock.warning({
     message: messageInput.value || "Warning Message",
     position: positionSelect.value,
     comeFrom: comeFromSelect.value,
     leaveFrom: leaveFromSelect.value,
     timeOut: parseInt(timeOutInput.value) || 5000,
-    goTo:goToInput.value || "/hello"
+    goTo:goToInput.value
 
 
   });

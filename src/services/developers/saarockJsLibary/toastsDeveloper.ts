@@ -62,6 +62,23 @@ class ToastsDeveloper {
     document.body.appendChild(this.nottyContainer);
 
     this.initializeEventForToastRemovalByClick();
+
+
+    /**
+     * Also include the toast css default by developers
+     */
+    this.addToastCss();
+
+  }
+
+  /**
+   * @note add the css 
+   */
+  public addToastCss() {
+    const linkElement = document.createElement("link");
+    linkElement.rel = "stylesheet";
+    linkElement.href = "../../src/styles/toast.css";
+    document.head.appendChild(linkElement);
   }
 
   /**
@@ -216,7 +233,7 @@ class ToastsDeveloper {
   }
 
   private addEventListenerOnToastMessage(toastBox: HTMLDivElement, slug: string) {
-    const childDiv = toastBox.children[1]as HTMLDivElement;
+    const childDiv = toastBox.children[1] as HTMLDivElement;
     childDiv.style.cursor = "pointer";
     childDiv.addEventListener("click", () => {
       window.location.assign(slug);

@@ -12,6 +12,11 @@ class BackToTopManager {
   }
 }
 
+
+/**
+ * Toast Manager
+ */
+
 class ToastsManager extends BackToTopManager implements ToastsManagerOptions {
   public async success(toast: Toast, type = "success") {
     await toastsDeveloper.addToastToQueue(toast, type);

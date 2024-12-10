@@ -77,7 +77,7 @@ class ToastsDeveloper {
   public addToastCss() {
     const linkElement = document.createElement("link");
     linkElement.rel = "stylesheet";
-    linkElement.href = "../../src/styles/toast.css";
+    linkElement.href = "./src/styles/toast.css";
     document.head.appendChild(linkElement);
   }
 

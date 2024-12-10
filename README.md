@@ -29,7 +29,8 @@ Using `async/await` can significantly improve performance by allowing for non-bl
         message: "success message",  // optional but better when manually added
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
-        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
+        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional,
+        goTo: "/url_where_you_want_to_redirect", // optional
       });
 
 
@@ -39,6 +40,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
         leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
+        goTo: "/url_where_you_want_to_redirect", // optional
       });
 
       notty.error({
@@ -47,6 +49,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
         leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
+        goTo: "/url_where_you_want_to_redirect", // optional
       });
 
       notty.loading({
@@ -55,6 +58,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
         timeOut: 5000, // optional
         leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
+        goTo: "/url_where_you_want_to_redirect", // optional
       });
 
 </script>

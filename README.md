@@ -25,13 +25,14 @@ Using `async/await` can significantly improve performance by allowing for non-bl
 
 ```html
 <script type="module">
-  import { notty } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
+   import { saarock } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
+
 
 // For toast 
 /**
  * @note: first option is default [ AND THE RECOMMENDATION IS USE ONLY ONE position for better experience on small devices ]
  */
-      notty.success({
+      saarock.success({
         position: "right" || "left" || "middle",  // optional
         message: "success message",  // optional but better when manually added
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
@@ -41,7 +42,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
       });
 
 
-      notty.warning({
+      saarock.warning({
         position: "right" || "left" || "middle", // optional
         message: "warning message",  // optional but better when manually added
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
@@ -50,7 +51,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
         goTo: "/url_where_you_want_to_redirect", // optional
       });
 
-      notty.error({
+      saarock.error({
         position: "right" || "left" || "middle", // optional
         message: "error message",  // optional but better when manually added
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
@@ -59,7 +60,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
         goTo: "/url_where_you_want_to_redirect", // optional
       });
 
-      notty.loading({
+       saarock.loading({
         position:"right" || "left" || "middle", // optional
         message: "loading message", // optional but better when manually added
         comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
@@ -74,7 +75,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
 ## How to Use Libary For BackToTopButton
 ```html 
 <script type="module">
-  import { notty } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
+  import { saarock } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
 
    // for backToTop button
 

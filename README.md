@@ -18,7 +18,7 @@ Using `async/await` can significantly improve performance by allowing for non-bl
 ## How To Use Libary For Toast
 ```html
    <!-- required in the head -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/src/styles/toast.css
 ```
 
 ```html

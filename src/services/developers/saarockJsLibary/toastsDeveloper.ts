@@ -62,23 +62,6 @@ class ToastsDeveloper {
     document.body.appendChild(this.nottyContainer);
 
     this.initializeEventForToastRemovalByClick();
-
-
-    /**
-     * Also include the toast css default by developers
-     */
-    this.addToastCss();
-
-  }
-
-  /**
-   * @note add the css 
-   */
-  public addToastCss() {
-    const linkElement = document.createElement("link");
-    linkElement.rel = "stylesheet";
-    linkElement.href = "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/src/styles/toast.css";
-    document.head.appendChild(linkElement);
   }
 
   /**
@@ -144,7 +127,7 @@ class ToastsDeveloper {
         });
 
         /**
-         * start toast timer after leave the toast
+         * start toast timer after mouseleave the toast
          */
         toastBox.addEventListener("mouseleave", async () => {
           toastBox.style.animationPlayState = "running";

@@ -30,13 +30,6 @@ class ToastsDeveloper {
         this.nottyContainer.appendChild(this.nottyRightChild);
         document.body.appendChild(this.nottyContainer);
         this.initializeEventForToastRemovalByClick();
-        this.addToastCss();
-    }
-    addToastCss() {
-        const linkElement = document.createElement("link");
-        linkElement.rel = "stylesheet";
-        linkElement.href = "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/src/styles/toast.css";
-        document.head.appendChild(linkElement);
     }
     addToastToQueue(toast, type) {
         return __awaiter(this, void 0, void 0, function* () {

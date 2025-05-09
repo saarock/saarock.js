@@ -1,8 +1,8 @@
 {
-  "name": "notty",
+  "name": "saarock.js",
   "version": "1.0.0",
   "description": "The powerful notifications library for the web world.",
-  "main": "dist/notty.min.js",
+  "main": "dist/index.js",
   "type": "module",
   "directories": {
     "doc": "docs",

@@ -134,9 +134,7 @@ class ToastsDeveloper {
                 yield useAddEventListenerOnTheCutIcon();
             }
             catch (error) {
-                if (error instanceof Error) {
-                    console.error("notty container error: " + error.message);
-                }
+                console.error(error instanceof Error ? error.message : "Something wrong on addEventListener Icon");
             }
         });
     }

@@ -19,5 +19,5 @@ export interface Toast {
  * Back to top options required
  */
 export interface BackToTop {
-  backColor: string
+  backColor: string;
 }

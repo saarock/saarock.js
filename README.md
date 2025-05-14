@@ -14,79 +14,76 @@ Using `async/await` can significantly improve performance by allowing for non-bl
 2. [How To Use Libary for backToTop](#how-to-use-libary-for-backToTopButton)
 3. [License](#license)
 
-
 ## How To Use Libary For Toast
+
 ```html
-   <!-- required in the head but in some cases toast works without it so pleased be aware.-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/src/styles/toast.css">
+<!-- required in the head but in some cases toast works without it so pleased be aware.-->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/src/styles/toast.css"
+/>
 ```
-
-
 
 ```html
 <script type="module">
-   import { saarock } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
+  import { saarock } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
 
+  // For toast
+  /**
+   * @note: first option is default [ AND THE RECOMMENDATION IS USE ONLY ONE position for better experience on small devices ]
+   */
+  saarock.success({
+    position: "right" || "left" || "middle", // optional
+    message: "success message", // optional but better when manually added
+    comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
+    timeOut: 5000, // optional
+    leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional,
+    goTo: "/url_where_you_want_to_redirect", // optional
+  });
 
-// For toast 
-/**
- * @note: first option is default [ AND THE RECOMMENDATION IS USE ONLY ONE position for better experience on small devices ]
- */
-      saarock.success({
-        position: "right" || "left" || "middle",  // optional
-        message: "success message",  // optional but better when manually added
-        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
-        timeOut: 5000, // optional
-        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional,
-        goTo: "/url_where_you_want_to_redirect", // optional
-      });
+  saarock.warning({
+    position: "right" || "left" || "middle", // optional
+    message: "warning message", // optional but better when manually added
+    comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
+    timeOut: 5000, // optional
+    leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
+    goTo: "/url_where_you_want_to_redirect", // optional
+  });
 
+  saarock.error({
+    position: "right" || "left" || "middle", // optional
+    message: "error message", // optional but better when manually added
+    comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
+    timeOut: 5000, // optional
+    leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
+    goTo: "/url_where_you_want_to_redirect", // optional
+  });
 
-      saarock.warning({
-        position: "right" || "left" || "middle", // optional
-        message: "warning message",  // optional but better when manually added
-        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
-        timeOut: 5000, // optional
-        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
-        goTo: "/url_where_you_want_to_redirect", // optional
-      });
-
-      saarock.error({
-        position: "right" || "left" || "middle", // optional
-        message: "error message",  // optional but better when manually added
-        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
-        timeOut: 5000, // optional
-        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
-        goTo: "/url_where_you_want_to_redirect", // optional
-      });
-
-       saarock.loading({
-        position:"right" || "left" || "middle", // optional
-        message: "loading message", // optional but better when manually added
-        comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
-        timeOut: 5000, // optional
-        leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
-        goTo: "/url_where_you_want_to_redirect", // optional
-      });
-
+  saarock.loading({
+    position: "right" || "left" || "middle", // optional
+    message: "loading message", // optional but better when manually added
+    comeFrom: "LEFT" || "BOTTOM" || "RIGHT" || "TOP", // optional
+    timeOut: 5000, // optional
+    leaveFrom: "RIGHT" || "LEFT" || "BOTTOM" || "TOP", // optional
+    goTo: "/url_where_you_want_to_redirect", // optional
+  });
 </script>
 ```
 
 ## How to Use Libary For BackToTopButton
-```html 
+
+```html
 <script type="module">
   import { saarock } from "https://cdn.jsdelivr.net/gh/saarock/saarock.js@main/dist/index.js";
 
-   // for backToTop button
+  // for backToTop button
 
-   saarock.backToTop(
-    {
-      backColor: "green" // required [Any color based on your web style]
-    }
-  );
-
+  saarock.backToTop({
+    backColor: "green", // required [Any color based on your web style]
+  });
 </script>
 ```
+
 ## License
 
 This library is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.

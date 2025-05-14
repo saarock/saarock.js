@@ -1,7 +1,10 @@
 import { toastsDeveloper } from "../../developers/saarockJsLibary/toastsDeveloper.js";
-import { BackToTop, Toast, ToastsManagerOptions } from "../../../types/index.js";
+import {
+  BackToTop,
+  Toast,
+  ToastsManagerOptions,
+} from "../../../types/index.js";
 import { backToTopDeveloper } from "../../developers/saarockJsLibary/backToTopDeveloper.js";
-
 
 /**
  * BackToTop Manager
@@ -11,7 +14,6 @@ class BackToTopManager {
     backToTopDeveloper.backToTop(backToTopOption);
   }
 }
-
 
 /**
  * Toast Manager
@@ -36,14 +38,10 @@ class ToastsManager extends BackToTopManager implements ToastsManagerOptions {
 }
 
 /**
- * Main manager 
+ * Main manager
  */
-class Saarock extends ToastsManager {
-
-}
-
+class Saarock extends ToastsManager {}
 
 const saarock = new Saarock();
-
 
 export { saarock };

@@ -34,9 +34,7 @@ class ToastsDeveloper {
   constructor() {
     this.queue = new Queue<Toast>(2);
     this.nottyContainer = document.createElement("div") as HTMLDivElement;
-    this.nottyContainer.classList.add(
-      `${NOTTY_CONTAINER_CLASS_NAME}`,
-    );
+    this.nottyContainer.classList.add(`${NOTTY_CONTAINER_CLASS_NAME}`);
 
     this.nottyLeftChild = document.createElement("div") as HTMLDivElement;
     this.nottyLeftChild.classList.add(
@@ -209,11 +207,18 @@ class ToastsDeveloper {
     try {
       await useAddEventListenerOnTheCutIcon();
     } catch (error) {
-      console.error(error instanceof Error ?  error.message : "Something wrong on addEventListener Icon");
+      console.error(
+        error instanceof Error
+          ? error.message
+          : "Something wrong on addEventListener Icon",
+      );
     }
   }
 
-  private addEventListenerOnToastMessage(toastBox: HTMLDivElement, slug: string) {
+  private addEventListenerOnToastMessage(
+    toastBox: HTMLDivElement,
+    slug: string,
+  ) {
     const childDiv = toastBox.children[1] as HTMLDivElement;
     childDiv.style.cursor = "pointer";
     childDiv.addEventListener("click", () => {
